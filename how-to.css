@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Handlee', cursive;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+/* Defining color variables */
+:root {
+    --black: #333033;
+    --burly_wood: #DEB887;
+    --old_lace: #FDF5E6;
+    --wheat: #F5DEB3;
+}
+
+/* Enhancements for the entire body for consistent padding and alignment */
+.body {
+    background: rgb(138, 100, 55);
+    font-family: 'Handlee', cursive;
+    line-height: 1.6;
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+}
+.howto-container{
+    margin-top: 5rem;
+}
+
+/* Styling for guide sections */
+#grind, #brew, #roast {
+    background-color: var(--wheat);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles within each guide */
+#grind h2, #brew h2, #roast h2 {
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+/* Paragraph styles for better readability */
+#grind p, #brew p, #roast p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify; /* Optional: For better readability */
+}
+
+/* Ensure links within guides are visually distinct */
+#grind a, #brew a, #roast a {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+/* Enhancements for buttons for a more engaging user interaction */
+button {
+    background-color: var(--burly_wood);
+    color: var(--black);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darken(var(--burly_wood), 10%);
+}

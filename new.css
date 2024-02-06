@@ -132,7 +132,7 @@ a:hover {
 
 /* Hero section styles */
 .hero {
-    background: burlywood;
+    background: rgb(173, 122, 55);
     padding: 0 0 0 2%;
     position: relative;
     overflow: hidden;
@@ -232,6 +232,7 @@ a:hover {
 .desc a:hover::after {
     width: 100%;
 }
+
 
 
 /*@keyframes color {
