@@ -29,7 +29,7 @@
 }
 
 /* Styling for guide sections */
-#grind, #brew, #roast {
+.guide {
     background-color: var(--wheat);
     margin: 20px 0;
     padding: 20px;
@@ -38,20 +38,20 @@
 }
 
 /* Heading styles within each guide */
-#grind h2, #brew h2, #roast h2 {
+.guide h2 {
     color: var(--black);
     margin-bottom: 15px;
 }
 
 /* Paragraph styles for better readability */
-#grind p, #brew p, #roast p {
+.guide p {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: justify; /* Optional: For better readability */
 }
 
 /* Ensure links within guides are visually distinct */
-#grind a, #brew a, #roast a {
+.guide a {
     color: var(--black);
     text-decoration: underline;
 }
