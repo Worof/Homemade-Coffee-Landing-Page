@@ -1,5 +1,7 @@
- @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+/* Importing Google font */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
+/* Global styles */
 * {
     padding: 0;
     margin: 0;
@@ -7,54 +9,54 @@
     font-family: 'Handlee', cursive;
     font-size: 18px;
     scroll-behavior: smooth;
-
 }
 
+/* Defining color variables */
 :root {
-    --black: #333033 --burly_wood: #DEB887 --old_lace: #FDF5E6 --wheat: #F5DEB3
+    --black: #333033;
+    --burly_wood: #DEB887;
+    --old_lace: #FDF5E6;
+    --wheat: #F5DEB3;
 }
 
+
+/* Body styles */
 body {
     background: bisque;
     width: 1351px;
     margin: auto;
 }
 
+/* Hiding check and menu */
 #check,
 .menu {
     display: none;
 }
 
-/* navigation bar */
+/* Navigation bar styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
     color: beige;
-    display: position absolute;
+    position: absolute;
     top: 0;
     z-index: 2;
     width: 80%;
-
-
-
 }
 
+/* Logo styles */
 .logo {
     display: flex;
     align-items: center;
     text-align: center;
     font-weight: bolder;
     text-transform: uppercase;
-    animation-name: color;
-    animation-duration: 2s;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-    animation-play-state:running;
-    animation-direction:alternate;
+    animation: color 2s linear infinite alternate running;
 }
 
+/* Dot styles */
 .logo .dot {
     display: inline-block;
     height: 0.5rem;
@@ -62,21 +64,19 @@ nav {
     border-radius: 50%;
     background: rgb(110, 61, 14);
     margin: 0.2rem;
-
-
 }
 
+/* Navigation links styles */
 .nav-links {
     display: flex;
     color: beige;
 }
 
 .nav-links .active {
-    color: burlywood
+    color: burlywood;
 }
 
 .nav-links a {
-
     text-decoration: none;
     margin-right: 1rem;
     color: beige;
@@ -97,8 +97,6 @@ a:hover {
     background: rgb(94, 58, 12);
     width: 0%;
     transition: all ease-in-out 250ms;
-    color: rgb(94, 58, 12);
-
 }
 
 .nav-links a:hover::after {
@@ -106,11 +104,9 @@ a:hover {
 
 }
 
-/* scroll bar*/
-
+/* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 15px;
-    color: burlywood;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -118,20 +114,26 @@ a:hover {
     background: linear-gradient(90deg, rgba(180, 111, 58, 1) 0%, rgba(252, 152, 69, 1) 100%);
 }
 
-::-webkit-scrollbar-thumb :hover {
+::-webkit-scrollbar-thumb:hover {
     background: radial-gradient(circle, rgba(180, 111, 58, 1) 0%, rgba(252, 152, 69, 1) 100%);
-
 }
 
 ::-webkit-scrollbar-track {
     background: rgb(233, 202, 161);
 }
 
-/* hero section */
+.scroll {
+    position: absolute;
+    bottom: 2rem;
+    z-index: 2;
 
+}
+
+
+/* Hero section styles */
 .hero {
     background: burlywood;
-    padding: 0rem 0% 0rem 2%;
+    padding: 0 0 0 2%;
     position: relative;
     overflow: hidden;
     color: beige;
@@ -147,7 +149,6 @@ a:hover {
     right: -15.3rem;
     top: 5rem;
     position: absolute;
-
 }
 
 .hero-bg img {
@@ -155,28 +156,22 @@ a:hover {
 }
 
 .hero .intro {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-    margin-left: 5rem;
+    margin: 7rem 0 7rem 5rem;
     z-index: 1;
-
 }
 
 .hero h1 {
     font-size: 90px;
-  
 }
 
 .hero h2 {
     margin-top: 1rem;
     font-size: 60px;
- 
 }
 
 .hero h3 {
     margin-top: 1rem;
-    font-size: 30;
-  
+    font-size: 30px;
 }
 
 button {
@@ -185,32 +180,25 @@ button {
     width: 125px;
     height: 50px;
     background: wheat;
-    border-color: wheat;
     border: none;
     color: rgb(53, 38, 38);
     font-weight: bolder;
     font-size: 20px;
-    padding: 0, 7rem 1rem;
     border-radius: 3px;
     box-shadow: 10px 10px 24px -1px rgb(145, 84, 38);
     cursor: pointer;
-    animation-name: color;
-    animation-duration: 2s;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-    animation-play-state:running;
-    animation-direction:alternate;
+    animation: color 2s linear infinite alternate running;
 }
 
 button:hover {
     animation-play-state: paused;
 }
+
 .desc .active {
-    color: burlywood
+    color: burlywood;
 }
 
 .desc a {
-
     text-decoration: none;
     margin-right: 1rem;
     color: beige;
@@ -231,13 +219,207 @@ a:hover {
     background: rgb(94, 58, 12);
     width: 0%;
     transition: all ease-in-out 250ms;
-    color: rgb(94, 58, 12);
-
 }
 
 .desc a:hover::after {
     width: 100%;
+}
 
+
+/*@keyframes color {
+
+
+    0% {
+        color: red;
+    }
+
+    100% {
+        color: rgb(53, 38, 38);
+
+    }
+
+}*/
+
+
+
+/* Brands section styles */
+.brands {
+    /* Minimum height to ensure it takes up at least the full viewport height */
+    min-height: 100vh;
+    /* Padding around the content */
+    padding: 7rem 10%;
+    /* Positioning context for absolute positioned children */
+    position: relative;
+    /* Prevents overflow of child elements */
+    overflow: hidden;
+    /* Flex container for aligning items horizontally */
+    display: flex;
+    /* Aligns items vertically in the center */
+    align-items: center;
+    /* Distributes items evenly in the horizontal direction */
+    justify-content: space-between;
+    /* Bottom margin for spacing between sections */
+    margin-bottom: 10rem;
+}
+
+/* Removes bottom margin for the last brands section */
+.brands:last-child {
+    margin-bottom: 0;
+}
+
+/* Styles for h2 elements in brands section */
+.brands h2 {
+    /* Font size and weight for heading */
+    font-size: 60px;
+    font-weight: bolder;
+    /* Text color */
+    color: rgb(110, 61, 14);
+    /* Bottom margin for spacing */
+    margin-bottom: 2rem;
+}
+
+/* Styles for images in brands section */
+.brands .img {
+    /* Dimensions of the image */
+    height: 40rem;
+    width: 60rem;
+    /* Flex grow factor, allows it to grow and take up available space */
+    flex: 1;
+    /* Right margin for spacing */
+    margin-right: 3rem;
+    /* Rotates the image */
+    transform: rotate(-90deg);
+}
+
+/* Styles for description in brands section */
+.brands .desc {
+    /* Flex grow factor, allows it to grow and take up available space */
+    flex: 1;
+}
+
+/* Styles for paragraph in brands section */
+.brands p {
+    /* Font size and weight */
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* Styles for bottom image in brands section */
+.brands .bottom-img {
+    /* Absolute positioning */
+    position: absolute;
+    /* Position from the right and top */
+    right: 7rem;
+    top: 10rem;
+    /* Rotates the image */
+    transform: rotate(-45deg);
+}
+
+/* Footer styles */
+footer {
+    /* Text color and background color */
+    color: rgb(206, 150, 87);
+    background: rgb(34, 23, 3);
+    /* Padding around the content */
+    padding: 1rem;
+    /* Centered text alignment */
+    text-align: center;
+}
+
+/* Styles for logo in footer */
+footer.logo {
+    /* Bottom margin for spacing */
+    margin-bottom: 2rem;
+    /* Centered margin */
+    margin: 0 auto 1rem auto;
+}
+
+/* Styles for paragraph in footer */
+footer p {
+    /* Right margin for spacing */
+    margin-right: 15rem;
+    /* Top margin for spacing */
+    margin-top: -1rem;
+    /* Font weight */
+    font-weight: bolder;
+    /* Bottom margin for spacing */
+    margin-bottom: 1rem;
+}
+
+/* Styles for social links in footer */
+footer .social {
+    /* Flex container for aligning items horizontally */
+    display: flex;
+    /* Aligns items vertically in the center */
+    align-items: center;
+    /* Distributes items evenly in the horizontal direction */
+    justify-content: center;
+}
+
+/* Styles for each social link in footer */
+footer .social a {
+    /* Dimensions of the link */
+    width: 30px;
+    height: 30px;
+    /* Rounded corners */
+    border-radius: 50%;
+    /* Background color */
+    background: rgb(185, 145, 84);
+    /* Right margin for spacing */
+    margin-right: 0.5rem;
+    /* Flex container for centering content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Removes right margin for the last social link in footer */
+footer .social :last-child {
+    margin-right: 0;
+}
+
+/* Styles for SVG icons in social links */
+footer .social svg {
+    /* Icon color */
+    color: beige;
+}
+
+/* Styles for icons in footer */
+footer .icons {
+    /* Flex container for aligning items horizontally */
+    display: flex;
+    /* Aligns items vertically in the center */
+    align-items: center;
+    /* Distributes items evenly in the horizontal direction */
+    justify-content: center;
+}
+
+/* Styles for each icon in footer */
+footer .icons a {
+    /* Dimensions of the icon */
+    width: 30px;
+    height: 30px;
+    /* Rounded corners */
+    border-radius: 50%;
+    /* Background color */
+    background: rgb(185, 145, 84);
+    /* Right margin for spacing */
+    margin-right: 0.5rem;
+    /* Flex container for centering content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Removes right margin for the last icon in footer */
+footer .icons :last-child {
+    margin-right: 0;
+}
+
+/* Styles for SVG icons in footer */
+footer .icons svg {
+    /* Icon color */
+    color: beige;
 }
 
 @keyframes color {
@@ -253,143 +435,9 @@ a:hover {
   
 }
 
-.scroll {
-    position: absolute;
-    bottom: 2rem;
-    z-index: 2;
-
-}
-
-/* brands */
-
-.brands {
-    min-height: 100vh;
-    padding: 7rem 10%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10rem;
-
-
-
-}
-
-.brands:last-child {
-    margin-bottom: 0;
-}
-
-.brands h2 {
-    font-size: 60px;
-    font-weight: bolder;
-    color: rgb(110, 61, 14);
-    margin-bottom: 2rem;
-}
-
-.brands .img {
-    height: 40rem;
-    width: 60rem;
-    flex: 1;
-    margin-right: 3rem;
-    transform: rotate(-90deg);
-
-}
-
-.brands .desc {
-    flex: 1;
-}
-
-.brands p {
-    font-size: 45px;
-    font-weight: bold;
-}
-
-.brands .bottom-img {
-    position: absolute;
-    right: 7rem;
-    top: 10rem;
-    transform: rotate(-45deg)
-}
-
-footer {
-    color: rgb(206, 150, 87);
-    background: rgb(34, 23, 3);
-    padding: 1rem;
-    text-align: center;
-
-}
-
-footer.logo {
-
-    margin-bottom: 2rem;
-    margin: 0 auto 1rem auto;
-}
-
-footer p {
-    margin-right: 15rem;
-    margin-top: -1rem;
-    font-weight: bolder;
-    margin-bottom: 1rem;
-    
-}
-
-footer .social {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-    
-footer .social a {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgb(185, 145, 84);
-    margin-right: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .social :last-child {
-    margin-right: 0;
-}
-
-footer .social svg {
-    color: beige;
-}
-
-
-footer .icons {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-   
-
-}
-
-
-footer .icons a {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgb(185, 145, 84);
-    margin-right: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .icons :last-child {
-    margin-right: 0;
-}
-
-footer .icons svg {
-    color: beige;
-}
 
 /*----------------animation-------------------*/
-.container {
+/*.container {
     height: 350px;
     position: center;
     transform: translate(-50%,-50%);
@@ -565,8 +613,8 @@ footer .icons svg {
 }
 .filter:hover .coffee{
    animation:pour 6s ;
-}
-@keyframes pour {
+}*/
+/*@keyframes pour {
     0% {
         visibility: hidden;
     }
@@ -728,4 +776,4 @@ transform:translateY(25px);
         background-color: #3b240e;
         bottom: -5px;
         left: -5px;
-    }
+    }*/
