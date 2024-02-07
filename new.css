@@ -323,6 +323,39 @@ a:hover {
     /* Rotates the image */
     transform: rotate(-45deg);
 }
+.info-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line as needed */
+    gap: 20px; /* Adjusts spacing between the sections */
+}
+
+.info-section > div {
+    flex: 1 1 calc(50% - 20px); /* Sets the basis for each div to occupy half of the container's width minus the gap */
+    display: flex;
+    flex-direction: column; /* Stacks the content of each div vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text */
+}
+
+.info-section .section-img img {
+    width: 100%; /* Ensures the image takes the full width of its parent */
+    max-width: 400px; /* Limits the image size */
+    height: auto; /* Maintains aspect ratio */
+    padding: 20px; /* Adds space around the image */
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Stacks the divs vertically on smaller screens */
+    }
+
+    .info-section > div {
+        flex-basis: 100%; /* Allows each div to take full width of the container */
+    }
+}
+
+
+
 
 /* Footer styles */
 footer {
@@ -334,6 +367,7 @@ footer {
     /* Centered text alignment */
     text-align: center;
 }
+
 
 /* Styles for logo in footer */
 footer.logo {
